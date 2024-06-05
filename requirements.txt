@@ -1,0 +1,7 @@
+streamlit
+pandas
+plotly
+openpyxl
+pycaret
+streamlit_pandas_profiling
+pandas_profiling
