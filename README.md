@@ -1,6 +1,6 @@
 # Classification-App-Streamlit
 
-### **:blue[Description de l'Application Streamlit pour la Création et l'Entraînement de Modèles de Classification avec PyCaret]**
+### **Description de l'Application Streamlit pour la Création et l'Entraînement de Modèles de Classification avec PyCaret**
 
 L'application Streamlit que j'ai créée offre une interface conviviale pour l'importation, le profilage, la configuration, l'entraînement, l'évaluation, le réglage fin, et la sauvegarde des modèles de classification en utilisant PyCaret. Voici un aperçu des fonctionnalités de chaque page :
 
