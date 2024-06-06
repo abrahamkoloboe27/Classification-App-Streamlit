@@ -26,6 +26,14 @@ if "setup_class" not in st.session_state :
     st.session_state.setup_class = None
 
 st.header("Profile Dataset",divider='rainbow')
+with st.sidebar : 
+        st.markdown("""
+        ## Auteur
+        :blue[Abraham KOLOBOE]
+        * Email : <abklb27@gmail.com>
+        * WhatsApp : +229 91 83 84 21
+        * Linkedin : [Abraham KOLOBOE](https://www.linkedin.com/in/abraham-zacharie-koloboe-data-science-ia-generative-llms-machine-learning)
+                    """)
 df = st.session_state.df
 if df is not None : 
     profile = st.button("Profile Dataset")
