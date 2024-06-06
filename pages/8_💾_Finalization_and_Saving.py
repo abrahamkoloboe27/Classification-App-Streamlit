@@ -21,6 +21,14 @@ st.set_page_config(
 
 model = st.session_state.compare_models_class
 st.header("Finalization and Saving",divider='rainbow')
+with st.sidebar : 
+        st.markdown("""
+        ## Auteur
+        :blue[Abraham KOLOBOE]
+        * Email : <abklb27@gmail.com>
+        * WhatsApp : +229 91 83 84 21
+        * Linkedin : [Abraham KOLOBOE](https://www.linkedin.com/in/abraham-zacharie-koloboe-data-science-ia-generative-llms-machine-learning)
+                    """)
 if model is not None:
     
     with st.form("Finalization and Saving") : 
