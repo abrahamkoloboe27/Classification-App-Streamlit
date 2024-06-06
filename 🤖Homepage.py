@@ -3,7 +3,14 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded")
 st.header("Classification Application",divider='rainbow')    
-
+with st.sidebar : 
+        st.markdown("""
+        ## Auteur
+        :blue[Abraham KOLOBOE]
+        * Email : <abklb27@gmail.com>
+        * WhatsApp : +229 91 83 84 21
+        * Linkedin : [Abraham KOLOBOE](https://www.linkedin.com/in/abraham-zacharie-koloboe-data-science-ia-generative-llms-machine-learning)
+                    """)
 st.markdown("""
 
 ### **:blue[Description de l'Application Streamlit pour la Création et l'Entraînement de Modèles de Classification avec PyCaret]**
