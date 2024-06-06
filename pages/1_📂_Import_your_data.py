@@ -1,14 +1,13 @@
 import streamlit as st
 import pandas as pd
-@st.cache
-@st.cache_data
-def long_running_function(param1, param2):
-    return "…"
+
+
 st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded")
 
-
+@st.cache
+@st.cache_data
 def load_data(file, formats,sp):
     if formats == "csv":
         data = pd.read_csv(file,sep=sp)
@@ -35,7 +34,14 @@ with col_2 :
   sep = st.radio("Sep",[",",";"])
 with col_3 :
   file = st.file_uploader("Upload your data here", type=[selected_format])
-
+with st.sidebar : 
+        st.markdown("""
+        ## Auteur
+        :blue[Abraham KOLOBOE]
+        * Email : <abklb27@gmail.com>
+        * WhatsApp : +229 91 83 84 21
+        * Linkedin : [Abraham KOLOBOE](https://www.linkedin.com/in/abraham-zacharie-koloboe-data-science-ia-generative-llms-machine-learning)
+                    """)
 
 if file is not None:
     data = load_data(file, selected_format,sep)
