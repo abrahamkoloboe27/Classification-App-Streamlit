@@ -23,7 +23,14 @@ def long_running_function(param1, param2):
 st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded")
-
+with st.sidebar : 
+        st.markdown("""
+        ## Auteur
+        :blue[Abraham KOLOBOE]
+        * Email : <abklb27@gmail.com>
+        * WhatsApp : +229 91 83 84 21
+        * Linkedin : [Abraham KOLOBOE](https://www.linkedin.com/in/abraham-zacharie-koloboe-data-science-ia-generative-llms-machine-learning)
+                    """)
 if st.session_state.df is not None :
     with st.form("Setup"): 
         col_1,col_2 = st.columns(2)
