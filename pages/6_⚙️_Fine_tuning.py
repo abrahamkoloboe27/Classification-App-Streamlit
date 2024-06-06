@@ -22,6 +22,14 @@ if "compare_models_pull" not in st.session_state :
 if "metric" not in st.session_state :
     st.session_state.metric = None
 st.header("Fine Tuning",divider='rainbow')
+with st.sidebar : 
+        st.markdown("""
+        ## Auteur
+        :blue[Abraham KOLOBOE]
+        * Email : <abklb27@gmail.com>
+        * WhatsApp : +229 91 83 84 21
+        * Linkedin : [Abraham KOLOBOE](https://www.linkedin.com/in/abraham-zacharie-koloboe-data-science-ia-generative-llms-machine-learning)
+                    """)
 model = st.session_state.compare_models_class
 if model is not None:
     col_1, col_2 = st.columns(2)
