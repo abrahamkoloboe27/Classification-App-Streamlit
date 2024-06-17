@@ -1,5 +1,7 @@
 pycaret
 plotly
+pandas 
+numpy
 pydantic
 
 
