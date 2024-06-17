@@ -1,6 +1,6 @@
 pycaret
 plotly
-
+pydantic
 
 
 
