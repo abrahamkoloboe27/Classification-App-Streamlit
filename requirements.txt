@@ -1,7 +1,6 @@
-streamlit
-pandas
-plotly
-openpyxl
 pycaret
+plotly
+
+
 
 
