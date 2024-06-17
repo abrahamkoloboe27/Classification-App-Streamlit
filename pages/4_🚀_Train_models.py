@@ -35,11 +35,17 @@ def long_running_function(param1, param2):
 st.header("Training models",divider='rainbow')
 
 exclude = ["SVM - Linear Kernel","SVM - Radial Kernel","Gaussian Process Classifier","MLP Classifier" ]
+include = ["Logistic Regression","K Neighbors Classifier","Decision Tree Classifier","Random Forest Classifier"]
 setup_class = st.session_state.setup_class
 if setup_class is not None :
     with st.form(""" # Train models""") :
-        models = st.multiselect("Select models to exclude ",options= dic.keys(), 
-            default=exclude)
+        include_exclude = st.selectbox("Include/Exclude models", ["Include","Exclude"])
+        if include_exclude == "Exclude" :
+            models = st.multiselect("Select models to exclude ",options= dic.keys(), 
+                default=exclude)
+        else :
+            models = st.multiselect("Select models to include ",options= dic.keys(), 
+                default=include)
         mod = [dic[i] for i in models]
         col_1,col_2 = st.columns(2)
         with col_1 :
@@ -53,7 +59,11 @@ if setup_class is not None :
         train_boutton = st.form_submit_button("🏄 Train !")
     if train_boutton :
         with st.spinner("Entrainement en cours..."):
-            compare_models_class = compare_models(exclude=mod, sort=metric, n_select=num_models, turbo=False)
+            if include_exclude == "Exclude" :
+                compare_models_class = compare_models(exclude=mod, sort=metric, n_select=num_models, turbo=False)
+            else :
+                compare_models_class = compare_models(include=mod, sort=metric, n_select=num_models, turbo=False)
+            
         compare_models_pull = pull()
         st.session_state.compare_models_class = compare_models_class
         st.session_state.compare_models_pull = compare_models_pull

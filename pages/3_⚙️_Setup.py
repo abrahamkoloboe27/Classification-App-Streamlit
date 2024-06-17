@@ -109,7 +109,7 @@ if st.session_state.df is not None :
         with col_1 : 
             strategy = dic[st.selectbox("Fold Strategy",dic.keys())]
         with col_2 : 
-            num_fold = int(st.number_input("Number of folds", min_value=2, value=10, max_value= int(len(st.session_state.df[target_variable])/5) ))
+            num_fold = int(st.number_input("Number of folds", min_value=2, value=5, max_value= int(len(st.session_state.df[target_variable])/5) ))
         perform_button = st.form_submit_button("Lancer setup")
     if perform_button : 
             setup_class = setup(data = st.session_state.df,

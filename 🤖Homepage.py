@@ -3,6 +3,28 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded")
 st.header("Classification Application",divider='rainbow')    
+if st.sidebar.toggle("A propos de l'auteur", True):
+    with st.expander("Auteur", True) : 
+        c1, c2 = st.columns([1,2])
+        with c1 :
+            st.image("img/About the author.png")
+        with c2 : 
+            st.header(""" **S. Abraham Z. KOLOBOE**""")
+            st.markdown("""
+                
+                *:blue[Data Scientist | Ingénieur en Mathématiques et Modélisation]*
+
+                Bonjour,
+
+                Je suis Abraham, un Data Scientist et Ingénieur en Mathématiques et Modélisation. 
+                Mon expertise se situe dans les domaines des sciences de données et de l'intelligence artificielle. 
+                Avec une approche technique et concise, je m'engage à fournir des solutions efficaces et précises dans mes projets.
+                        
+                * Email : <abklb27@gmail.com>
+                * WhatsApp : +229 91 83 84 21
+                * Linkedin : [Abraham KOLOBOE](https://www.linkedin.com/in/abraham-zacharie-koloboe-data-science-ia-generative-llms-machine-learning)
+                    
+                                    """)
 with st.sidebar : 
         st.markdown("""
         ## Auteur

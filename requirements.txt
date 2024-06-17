@@ -6,3 +6,4 @@ pycaret
 pydantic
 streamlit_pandas_profiling
 pandas_profiling
+ydata_profiling
