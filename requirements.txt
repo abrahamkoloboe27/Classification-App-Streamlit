@@ -1,8 +1,5 @@
-numba==0.60.0
-numpy
-openpyxl
-pandas-profiling
 pycaret
+plotly
+pandas 
+numpy
 pydantic
-streamlit
-streamlit-pandas-profiling
